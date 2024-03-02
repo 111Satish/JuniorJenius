@@ -1,0 +1,32 @@
+/* src/Dashboard.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .dashboard-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .nav-bar {
+    display: flex;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+  }
+  
+  .nav-bar a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+  }
+  
+  .content {
+    padding: 20px;
+    flex: 1;
+  }
+  
+  /* Add styles for Level 1, Level 2, Level 3 content as needed */
+  
