@@ -1,7 +1,7 @@
-// src/Dashboard.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './dashboard.css';
+import NavBar from './navBar';
 
 const games = [
   {
@@ -45,17 +45,10 @@ const games = [
   
 ];
 
-const Dashboard = () => {
+const Games = () => {
   return (
     <div>
-      <nav className="top-nav">
-        <ul>
-          <li><Link to="/learning">Learning</Link></li>
-          <li><Link to="/games">Games</Link></li>
-          <li><Link to="/profile">Profile</Link></li>
-          <li><Link to="/logout">Logout</Link></li>
-        </ul>
-      </nav>
+      <NavBar/>
       <div className="dashboard-container">
         <h1>Game Dashboard</h1>
         <div className="game-list">
@@ -71,5 +64,5 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default Games;
 

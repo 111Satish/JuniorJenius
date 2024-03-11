@@ -2,8 +2,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './signUp.css';
+import { useNavigate } from 'react-router-dom';
 
 const Signup = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [orgName, setOrgName] = useState('');
   const [orgId, setOrgId] = useState('');
@@ -13,7 +15,7 @@ const Signup = () => {
 
   const handleSignup = async () => {
     try {
-      const response = await axios.post('http://localhost:3000/signup', {
+      const response = await axios.post('http://localhost:3000/signUp', {
         email: email,
         orgName: orgName,
         orgId: orgId,
@@ -22,6 +24,7 @@ const Signup = () => {
 
       if (response.status === 201) {
         alert('Signup successful!');
+        navigate('/login')
         
       } else {
         const data = await response.json();

@@ -1,32 +1,42 @@
-/* src/Dashboard.css */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .dashboard-container {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .nav-bar {
-    display: flex;
-    background-color: #333;
-    color: white;
-    padding: 10px;
-  }
-  
-  .nav-bar a {
-    text-decoration: none;
-    color: white;
-    margin: 0 10px;
-  }
-  
-  .content {
-    padding: 20px;
-    flex: 1;
-  }
-  
-  /* Add styles for Level 1, Level 2, Level 3 content as needed */
-  
+.alphabet-game-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.image-container img {
+  max-width: 100%;
+  max-height: 300px;
+  margin-bottom: 20px;
+}
+
+.letter-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.letter-options button {
+  margin: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.letter-options button:hover {
+  background-color: #2980b9;
+}
+
+.score {
+  margin-top: 20px;
+}
+
+.total-score {
+  margin-top: 30px;
+}
+
+/* Add any other styles or adjustments as needed */

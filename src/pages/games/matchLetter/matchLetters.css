@@ -1,0 +1,44 @@
+.match-letters-game-container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .letter-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .letter-options button {
+    margin: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .letter-options button:hover {
+    background-color: #2980b9;
+  }
+  
+  .next-level-button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .next-level-button:hover {
+    background-color: #218c53;
+  }
+  

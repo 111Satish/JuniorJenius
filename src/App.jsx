@@ -5,14 +5,12 @@ import LoginPage from './pages/login';
 import SignupPage from './pages/signUp';
 import AboutPage from './pages/aboutUs';
 import Dashboard from './pages/dashboard';
-import Level1 from './pages/games/selectLetter/levels/level1';
-import Level2 from './pages/games/selectLetter/levels/level2';
-import Level3 from './pages/games/selectLetter/levels/level3';
-import Level4 from './pages/games/selectLetter/levels/level4';
-import Level5 from './pages/games/selectLetter/levels/level5';
-import Level6 from './pages/games/selectLetter/levels/level6';
-
-import SelectLetter from './pages/games/selectLetter';
+import SelectLetter from './pages/games/selectLetter/selectLetter';
+import MatchLetters from './pages/games/matchLetter/matchLetters';
+import LearningDashboard from './pages/learning';
+import Games from './pages/games';
+import Profile from './pages/profile';
+import ABC from './pages/learning/abc';
 
 const App = () => {
   return (
@@ -24,13 +22,11 @@ const App = () => {
         <Route path="/about" element={<AboutPage />} />
         <Route path='/dashboard' element ={<Dashboard/>}/>
         <Route path='/selectLetter' element ={<SelectLetter/>}/>
-        <Route path='/level1' element ={<Level1/>}/>
-        <Route path='/level2' element ={<Level2/>}/>
-        <Route path='/level3' element ={<Level3/>}/>
-        <Route path='/level4' element ={<Level4/>}/>
-        <Route path='/level5' element ={<Level5/>}/>
-        <Route path='/level6' element ={<Level6/>}/>
-        {/* Add more routes as needed */}
+        <Route path='/matchLetters' element ={<MatchLetters/>}/>
+        <Route path='/Learning' element= {<LearningDashboard/>}/>
+        <Route path= '/Games' element= {<Games/>}/>
+        <Route path= '/profile' element= {<Profile/>}/>
+        <Route path= '/learnabc' element={<ABC/>}/>
       </Routes>
     </BrowserRouter>
   );
