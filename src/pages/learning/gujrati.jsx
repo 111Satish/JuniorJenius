@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './abc.css';
 
-const ABC = () => {
+const Gujrati = () => {
   const [currentLetter, setCurrentLetter] = useState('A');
 
   const alphabetImagePath = (letter) => `/letters/${letter.toLowerCase()}.jpg`; 
@@ -33,7 +33,7 @@ const ABC = () => {
 
   return (
     <div className="alphabet-learning-container">
-      <h1>Learn English Alphabet</h1>
+      <h1>Learn Gujrati Alphabet</h1>
       <div className="letter-display">
         <img src={alphabetImagePath(currentLetter)} alt={`Image for letter ${currentLetter}`} />
         {/* <p>{currentLetter}</p> */}
@@ -46,4 +46,4 @@ const ABC = () => {
   );
 };
 
-export default ABC;
+export default Gujrati;

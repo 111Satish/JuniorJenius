@@ -11,6 +11,11 @@ import LearningDashboard from './pages/learning';
 import Games from './pages/games';
 import Profile from './pages/profile';
 import ABC from './pages/learning/abc';
+import Hindi from './pages/learning/hindi';
+import Bangla from './pages/learning/bangla';
+import Tamil from './pages/learning/tamil';
+import Telgu from './pages/learning/telgu';
+import Gujrati from './pages/learning/gujrati';
 
 const App = () => {
   return (
@@ -26,7 +31,12 @@ const App = () => {
         <Route path='/Learning' element= {<LearningDashboard/>}/>
         <Route path= '/Games' element= {<Games/>}/>
         <Route path= '/profile' element= {<Profile/>}/>
-        <Route path= '/learnabc' element={<ABC/>}/>
+        <Route path= '/learning/hindi' element={<Hindi/>}/>
+        <Route path= '/learning/bangla' element={<Bangla/>}/>
+        <Route path= '/learning/tamil' element={<Tamil/>}/>
+        <Route path= '/learning/telgu' element={<Telgu/>}/>
+        <Route path= '/learning/gujrati' element={<Gujrati/>}/>
+        <Route path= '/learning/abc' element={<ABC/>}/>
       </Routes>
     </BrowserRouter>
   );

@@ -45,8 +45,8 @@ const MatchLetters = ({ level, onNextLevel }) => {
           </button>
         ))}
       </div>
-      <button className="next-level-button" onClick={onNextLevel} // Assuming proper handling in onNextLevel
-        /* Add any necessary asynchronous handling or state updates here */
+      <button className="next-level-button" onClick={onNextLevel} 
+  
       >
         Next Level
       </button>
