@@ -1,10 +1,11 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Layout from './component/Layout.jsx';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import HomePage from './pages/home';
 import LoginPage from './pages/login';
 import SignupPage from './pages/signUp';
 import AboutPage from './pages/aboutUs';
-import Dashboard from './pages/dashboard';
+//import Dashboard from './pages/dashboard';
 import SelectLetter from './pages/games/selectLetter/selectLetter';
 import MatchLetters from './pages/games/matchLetter/matchLetters';
 import LearningDashboard from './pages/learning';
@@ -14,32 +15,86 @@ import ABC from './pages/learning/abc';
 import Hindi from './pages/learning/hindi';
 import Bangla from './pages/learning/bangla';
 import Tamil from './pages/learning/tamil';
-import Telgu from './pages/learning/telgu';
+import Telugu from './pages/learning/telugu';
 import Gujrati from './pages/learning/gujrati';
 
 const App = () => {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/signup" element={<SignupPage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path='/dashboard' element ={<Dashboard/>}/>
-        <Route path='/selectLetter' element ={<SelectLetter/>}/>
-        <Route path='/matchLetters' element ={<MatchLetters/>}/>
-        <Route path='/Learning' element= {<LearningDashboard/>}/>
-        <Route path= '/Games' element= {<Games/>}/>
-        <Route path= '/profile' element= {<Profile/>}/>
-        <Route path= '/learning/hindi' element={<Hindi/>}/>
-        <Route path= '/learning/bangla' element={<Bangla/>}/>
-        <Route path= '/learning/tamil' element={<Tamil/>}/>
-        <Route path= '/learning/telgu' element={<Telgu/>}/>
-        <Route path= '/learning/gujrati' element={<Gujrati/>}/>
-        <Route path= '/learning/abc' element={<ABC/>}/>
-      </Routes>
-    </BrowserRouter>
-  );
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Layout />,
+      children: [
+        {
+          path: "/",
+          element: <LoginPage />,
+        },
+        {
+          path: "/login",
+          element: <LoginPage />,
+        },
+        {
+          path: "/signup",
+          element: <SignupPage />,
+        },
+        {
+          path: "/about",
+          element: <AboutPage />,
+        },
+        // {
+        //   path: "/dashboard",
+        //   element: <Dashboard />,
+        // },
+        {
+          path: "/selectLetter",
+          element: <SelectLetter />,
+        },
+        {
+          path: "/matchLetters",
+          element: <MatchLetters />,
+        },
+        {
+          path: "/games",
+          element: <Games />,
+        },
+        {
+          path: "/profile",
+          element: <Profile />,
+        },
+        {
+          path: "/learning",
+          element: <LearningDashboard/>,
+        },
+        {
+          path: "/learning/hindi",
+          element: <Hindi />,
+        },
+        {
+          path: "/learning/bangla",
+          element: <Bangla />,
+        },
+        {
+          path: "/learning/tamil",
+          element: <Tamil />,
+        },
+        {
+          path: "/learning/telugu",
+          element: <Telugu />,
+        },
+        {
+          path: "/learning/gujrati",
+          element: <Gujrati />,
+        },
+        {
+          path: "/learning/abc",
+          element: <ABC />,
+        },
+      ],
+    },
+  ]);
+
+  return <RouterProvider router={router} />;
 };
 
 export default App;
+
+

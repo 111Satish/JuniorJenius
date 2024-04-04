@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./dashboard.css";
-import NavBar from "./navBar";
+import "./learning.css";
 
 const learning = [
   {
@@ -13,26 +12,26 @@ const learning = [
   {
     id: 2,
     name: "Learn Hindi Alphabet",
-    imageUrl: "./public/smallCap.jpg",
+    imageUrl: "./public/hindi_image.jpg",
     path: "/learning/hindi",
   },
 
   {
     id: 3,
     name: "Learn Tamil Alphabet",
-    imageUrl: "./public/cap.jpg",
+    imageUrl: "./public/tamil_image.jpg",
     path: "/learning/tamil",
   },
   {
     id: 4,
-    name: "Learn Telgu Alphabet",
-    imageUrl: "./public/smallCap.jpg",
-    path: "/learning/telgu",
+    name: "Learn Telugu Alphabet",
+    imageUrl: "./public/telugu_image.jpg",
+    path: "/learning/telugu",
   },
   {
     id: 5,
     name: "Learn Bangla Alphabet",
-    imageUrl: "./public/cap.jpg",
+    imageUrl: "./public/bangla_image.png",
     path: "/learning/bangla",
   },
   {
@@ -46,7 +45,6 @@ const learning = [
 const Learning = () => {
   return (
     <div>
-      <NavBar />
       <div className="dashboard-container">
         <h1>Learning Dashboard</h1>
         <div className="game-list">

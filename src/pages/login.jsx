@@ -10,7 +10,6 @@ const Login = () => {
   const [error, setError] = useState('');
 
   const handleLogin = async () => {
-
     try {
       const response = await axios.post('http://localhost:3000/login', {
         email: email,
@@ -18,8 +17,10 @@ const Login = () => {
       });
 
       if (response.status === 200) {
+        localStorage.setItem('isLoggedIn', 'true');
+        localStorage.setItem('userData', JSON.stringify(response.data)); 
         alert('Login successful!');
-        navigate('/dashboard')
+        navigate('/learning');
       } else {
         setError(response.data.error || 'Failed to login');
       }

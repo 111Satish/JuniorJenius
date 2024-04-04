@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './dashboard.css';
-import NavBar from './navBar';
+import './games.css';
 
 const games = [
   {
@@ -48,7 +47,6 @@ const games = [
 const Games = () => {
   return (
     <div>
-      <NavBar/>
       <div className="dashboard-container">
         <h1>Game Dashboard</h1>
         <div className="game-list">

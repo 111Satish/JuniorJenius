@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './dashboard.css';
-import NavBar from './navBar';
 
 const Profile = () => {
   return (

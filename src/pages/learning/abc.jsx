@@ -8,7 +8,7 @@ const ABC = () => {
 
   useEffect(() => {
     const playAudio = () => {
-      const audio = new Audio(`path_to_audio_folder/${currentLetter}.mp3`); 
+      const audio = new Audio(`/lettersAudio/${currentLetter}.mp3`); 
       audio.play();
     };
 

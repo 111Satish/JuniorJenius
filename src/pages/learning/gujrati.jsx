@@ -4,8 +4,6 @@ import './abc.css';
 const Gujrati = () => {
   const [currentLetter, setCurrentLetter] = useState('A');
 
-  const alphabetImagePath = (letter) => `/letters/${letter.toLowerCase()}.jpg`; 
-
   useEffect(() => {
     const playAudio = () => {
       const audio = new Audio(`path_to_audio_folder/${currentLetter}.mp3`); 
@@ -31,12 +29,26 @@ const Gujrati = () => {
     }
   };
 
+  const getLetterStyle = () => {
+    return {
+      color: 'white',
+      backgroundColor: 'blue',
+      border: '2px solid black',
+      borderRadius: '10px',
+      padding: '10px',
+      fontSize: '36px',
+      fontWeight: 'bold',
+      textAlign: 'center',
+      width: '100px', 
+      height: '100px', 
+    };
+  };
+
   return (
     <div className="alphabet-learning-container">
       <h1>Learn Gujrati Alphabet</h1>
-      <div className="letter-display">
-        <img src={alphabetImagePath(currentLetter)} alt={`Image for letter ${currentLetter}`} />
-        {/* <p>{currentLetter}</p> */}
+      <div className="letter-display" style={getLetterStyle()}>
+        <p>{currentLetter}</p>
       </div>
       <div className="navigation-buttons">
         <button onClick={handlePrevLetter}>Previous</button>

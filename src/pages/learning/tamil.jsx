@@ -2,45 +2,55 @@ import React, { useState, useEffect } from 'react';
 import './abc.css';
 
 const Tamil = () => {
-  const [currentLetter, setCurrentLetter] = useState('A');
+  const tamilAlphabet = [
+    'அ', 'ஆ', 'இ', 'ஈ', 'உ', 'ஊ', 'எ', 'ஏ', 'ஐ', 'ஒ', 'ஓ', 'ஔ',
+    'க', 'ங', 'ச', 'ஞ', 'ட', 'ண', 'த', 'ந', 'ப', 'ம', 'ய', 'ர',
+    'ல', 'வ', 'ழ', 'ள', 'ற', 'ன'
+  ];
 
-  const alphabetImagePath = (letter) => `/letters/${letter.toLowerCase()}.jpg`; 
+  const [currentLetterIndex, setCurrentLetterIndex] = useState(0);
 
   useEffect(() => {
     const playAudio = () => {
-      const audio = new Audio(`path_to_audio_folder/${currentLetter}.mp3`); 
+      const audio = new Audio(`path_to_tamil_audio_folder/${tamilAlphabet[currentLetterIndex]}.mp3`);
       audio.play();
     };
 
     playAudio();
-  }, [currentLetter]);
+  }, [currentLetterIndex, tamilAlphabet]);
 
   const handleNextLetter = () => {
-    if (currentLetter === 'Z') {
-      setCurrentLetter('A');
-    } else {
-      setCurrentLetter(String.fromCharCode(currentLetter.charCodeAt(0) + 1));
-    }
+    setCurrentLetterIndex((prevIndex) => (prevIndex + 1) % tamilAlphabet.length);
   };
 
   const handlePrevLetter = () => {
-    if (currentLetter === 'A') {
-      setCurrentLetter('Z');
-    } else {
-      setCurrentLetter(String.fromCharCode(currentLetter.charCodeAt(0) - 1));
-    }
+    setCurrentLetterIndex((prevIndex) => (prevIndex - 1 + tamilAlphabet.length) % tamilAlphabet.length);
+  };
+
+  const getLetterStyle = () => {
+    return {
+      color: 'white',
+      backgroundColor: 'blue',
+      border: '2px solid black',
+      borderRadius: '10px',
+      padding: '10px',
+      fontSize: '100px',
+      fontWeight: 'bold',
+      textAlign: 'center',
+      width: '300px',
+      height: '250px',
+    };
   };
 
   return (
     <div className="alphabet-learning-container">
-      <h1>Learn Tamil Alphabet</h1>
-      <div className="letter-display">
-        <img src={alphabetImagePath(currentLetter)} alt={`Image for letter ${currentLetter}`} />
-        {/* <p>{currentLetter}</p> */}
+      <h1>தமிழ் உயிரெழுத்து கற்க</h1>
+      <div className="letter-display" style={getLetterStyle()}>
+        <p>{tamilAlphabet[currentLetterIndex]}</p>
       </div>
       <div className="navigation-buttons">
-        <button onClick={handlePrevLetter}>Previous</button>
-        <button onClick={handleNextLetter}>Next</button>
+        <button onClick={handlePrevLetter}>முந்தையது</button>
+        <button onClick={handleNextLetter}>அடுத்தது</button>
       </div>
     </div>
   );

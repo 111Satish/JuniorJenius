@@ -2,45 +2,53 @@ import React, { useState, useEffect } from 'react';
 import './abc.css';
 
 const Bangla = () => {
-  const [currentLetter, setCurrentLetter] = useState('A');
+  const banglaAlphabet = [
+    'অ', 'আ', 'ই', 'ঈ', 'উ', 'ঊ', 'ঋ', 'এ', 'ঐ', 'ও', 'ঔ', 'ক', 'খ', 'গ', 'ঘ', 'ঙ', 'চ', 'ছ', 'জ', 'ঝ', 'ঞ', 'ট', 'ঠ', 'ড', 'ঢ', 'ণ', 'ত', 'থ', 'দ', 'ধ', 'ন', 'প', 'ফ', 'ব', 'ভ', 'ম', 'য', 'র', 'ল', 'শ', 'ষ', 'স', 'হ', 'ড়', 'ঢ়', 'য়', 'ৎ'
+  ];
 
-  const alphabetImagePath = (letter) => `/letters/${letter.toLowerCase()}.jpg`; 
+  const [currentLetterIndex, setCurrentLetterIndex] = useState(0);
 
   useEffect(() => {
     const playAudio = () => {
-      const audio = new Audio(`path_to_audio_folder/${currentLetter}.mp3`); 
+      const audio = new Audio(`path_to_bangla_audio_folder/${banglaAlphabet[currentLetterIndex]}.mp3`);
       audio.play();
     };
 
     playAudio();
-  }, [currentLetter]);
+  }, [currentLetterIndex, banglaAlphabet]);
 
   const handleNextLetter = () => {
-    if (currentLetter === 'Z') {
-      setCurrentLetter('A');
-    } else {
-      setCurrentLetter(String.fromCharCode(currentLetter.charCodeAt(0) + 1));
-    }
+    setCurrentLetterIndex((prevIndex) => (prevIndex + 1) % banglaAlphabet.length);
   };
 
   const handlePrevLetter = () => {
-    if (currentLetter === 'A') {
-      setCurrentLetter('Z');
-    } else {
-      setCurrentLetter(String.fromCharCode(currentLetter.charCodeAt(0) - 1));
-    }
+    setCurrentLetterIndex((prevIndex) => (prevIndex - 1 + banglaAlphabet.length) % banglaAlphabet.length);
+  };
+
+  const getLetterStyle = () => {
+    return {
+      color: 'white',
+      backgroundColor: 'blue',
+      border: '2px solid black',
+      borderRadius: '10px',
+      padding: '10px',
+      fontSize: '100px',
+      fontWeight: 'bold',
+      textAlign: 'center',
+      width: '300px',
+      height: '250px',
+    };
   };
 
   return (
     <div className="alphabet-learning-container">
-      <h1>Learn Bangla Alphabet</h1>
-      <div className="letter-display">
-        <img src={alphabetImagePath(currentLetter)} alt={`Image for letter ${currentLetter}`} />
-        {/* <p>{currentLetter}</p> */}
+      <h1>বাংলা বর্ণমালা শিখুন</h1>
+      <div className="letter-display" style={getLetterStyle()}>
+        <p>{banglaAlphabet[currentLetterIndex]}</p>
       </div>
       <div className="navigation-buttons">
-        <button onClick={handlePrevLetter}>Previous</button>
-        <button onClick={handleNextLetter}>Next</button>
+        <button onClick={handlePrevLetter}>পূর্ববর্তী</button>
+        <button onClick={handleNextLetter}>পরবর্তী</button>
       </div>
     </div>
   );
