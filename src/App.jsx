@@ -17,6 +17,7 @@ import Bangla from './pages/learning/bangla';
 import Tamil from './pages/learning/tamil';
 import Telugu from './pages/learning/telugu';
 import Gujrati from './pages/learning/gujrati';
+import EnglishPhonics from './pages/learning/englishPhonics.jsx';
 
 const App = () => {
   const router = createBrowserRouter([
@@ -88,6 +89,10 @@ const App = () => {
           path: "/learning/abc",
           element: <ABC />,
         },
+        {
+          path: "/learning/englishphonics",
+          element:<EnglishPhonics/>
+        }
       ],
     },
   ]);

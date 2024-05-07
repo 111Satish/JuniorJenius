@@ -15,7 +15,7 @@ const Signup = () => {
 
   const handleSignup = async () => {
     try {
-      const response = await axios.post('http://localhost:3000/signUp', {
+      const response = await axios.post('https://juniorgeniusbackend.onrender.com/signUp', {
         email: email,
         orgName: orgName,
         orgId: orgId,
