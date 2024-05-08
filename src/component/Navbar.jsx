@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate,Link } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
+
+  const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
@@ -17,20 +20,20 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <a href="/">JuniorGenius</a>
+        <Link to='/'>JuniorGenius</Link>
       </div>
       <ul className="navbar-links">
         {isLoggedIn ? (
           <>
-            <li><a href="/learning">Learning</a></li>
-            <li><a href="/games">Games</a></li>
-            <li><a href="/profile">Profile</a></li>
+            <li><Link to="/learning">Learning</Link></li>
+            <li><Link to="/games">Games</Link></li>
+            <li><Link to="/profile">Profile</Link></li>
             <li><span onClick={handleLogout}>Logout</span></li>
           </>
         ) : (
-          <li><a href="/login">Login</a></li>
+          <li><Link to="/login">Login</Link></li>
         )}
-        <li><a href="/about">About</a></li>
+        <li><Link href="/about">About</Link></li>
       </ul>
     </nav>
   );
