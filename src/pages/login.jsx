@@ -30,7 +30,7 @@ const Login = () => {
   };
 
   return (
-    <div className="app-container">
+    <div className="app-container" style={{backgroundImage: "url('./junnior.gif')"}}>
       <div className="login-box">
         <h1>Login</h1>
         <form>
