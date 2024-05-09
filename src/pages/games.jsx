@@ -6,38 +6,38 @@ const games = [
   {
     id: 1,
     name: 'Select Letter',
-    imageUrl: './public/cap.jpg',
+    imageUrl: './cap.jpg',
     path: '/selectLetter',
   },
   {
     id: 2,
     name: 'Match Letters',
-    imageUrl: './public/smallCap.jpg',
+    imageUrl: './smallCap.jpg',
     path: '/matchLetters',
   },
 
   {
     id: 3,
     name: 'Select Letter',
-    imageUrl: './public/cap.jpg',
+    imageUrl: './cap.jpg',
     path: '/selectLetter',
   },
   {
     id: 4,
     name: 'Match Letters',
-    imageUrl: './public/smallCap.jpg',
+    imageUrl: './smallCap.jpg',
     path: '/matchLetters',
   },
   {
     id: 5,
     name: 'Select Letter',
-    imageUrl: './public/cap.jpg',
+    imageUrl: './cap.jpg',
     path: '/selectLetter',
   },
   {
     id: 6,
     name: 'Match Letters',
-    imageUrl: './public/smallCap.jpg',
+    imageUrl: './smallCap.jpg',
     path: '/matchLetters',
   },
 
