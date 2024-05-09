@@ -4,7 +4,7 @@ import './abc.css';
 const ABC = () => {
   const [currentLetter, setCurrentLetter] = useState('A');
 
-  const alphabetImagePath = (letter) => `/letters/${letter.toLowerCase()}.jpg`; 
+  const alphabetImagePath = (letter) => `./letters/${letter.toLowerCase()}.jpg`; 
 
   useEffect(() => {
     const playAudio = () => {

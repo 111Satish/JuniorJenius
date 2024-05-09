@@ -6,38 +6,38 @@ const learning = [
   {
     id: 1,
     name: "Learn English Alphabet",
-    imageUrl: "./public/cap.jpg",
+    imageUrl: "./cap.jpg",
     path: "/learning/abc",
   },
   {
     id: 2,
     name: "Learn Hindi Alphabet",
-    imageUrl: "./public/hindi_image.jpg",
+    imageUrl: "./hindi_image.jpg",
     path: "/learning/hindi",
   },
 
   {
     id: 3,
     name: "Learn Tamil Alphabet",
-    imageUrl: "./public/tamil_image.jpg",
+    imageUrl: "./tamil_image.jpg",
     path: "/learning/tamil",
   },
   {
     id: 4,
     name: "Learn Telugu Alphabet",
-    imageUrl: "./public/telugu_image.jpg",
+    imageUrl: "./telugu_image.jpg",
     path: "/learning/telugu",
   },
   {
     id: 5,
     name: "Learn Bangla Alphabet",
-    imageUrl: "./public/bangla_image.png",
+    imageUrl: "./bangla_image.png",
     path: "/learning/bangla",
   },
   {
     id: 6,
     name: "Learn Gujrati Alphabet",
-    imageUrl: "./public/smallCap.jpg",
+    imageUrl: "./smallCap.jpg",
     path: "/learning/gujrati",
   },
 ];
@@ -46,38 +46,38 @@ const phonics = [
   {
     id: 1,
     name: "English Phonics",
-    imageUrl: "./public/cap.jpg",
+    imageUrl: "./cap.jpg",
     path: "/learning/englishphonics",
   },
   {
     id: 2,
     name: "Hindi Phonics",
-    imageUrl: "./public/hindi_image.jpg",
+    imageUrl: "./hindi_image.jpg",
     path: "/learning/hindi",
   },
 
   {
     id: 3,
     name: "Tamil Phonics",
-    imageUrl: "./public/tamil_image.jpg",
+    imageUrl: "./tamil_image.jpg",
     path: "/learning/tamil",
   },
   {
     id: 4,
     name: "Telugu Phonics",
-    imageUrl: "./public/telugu_image.jpg",
+    imageUrl: "./telugu_image.jpg",
     path: "/learning/telugu",
   },
   {
     id: 5,
     name: "Bangla Phonics",
-    imageUrl: "./public/bangla_image.png",
+    imageUrl: "./bangla_image.png",
     path: "/learning/bangla",
   },
   {
     id: 6,
     name: "Gujrati Phonics",
-    imageUrl: "./public/smallCap.jpg",
+    imageUrl: "./smallCap.jpg",
     path: "/learning/gujrati",
   },
 ];
